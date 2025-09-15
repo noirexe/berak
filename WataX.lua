@@ -73,7 +73,7 @@ local function createUI()
     Label.TextColor3 = Color3.fromRGB(200,200,255)
     Label.Font = Enum.Font.GothamBold
     Label.TextSize = 16
-    Label.Text = "WataX"
+    Label.Text = "Monyet"
     Label.Parent = Frame
 
     
@@ -85,7 +85,7 @@ local function createUI()
     AnimBtn.TextColor3 = Color3.fromRGB(255,255,255)
     AnimBtn.Font = Enum.Font.GothamBold
     AnimBtn.TextSize = 14
-    AnimBtn.Text = "BYPASS: ON"
+    AnimBtn.Text = "ANIM: ON"
     AnimBtn.Parent = Frame
 
     local AnimCorner = Instance.new("UICorner")
@@ -95,10 +95,10 @@ local function createUI()
     AnimBtn.MouseButton1Click:Connect(function()
         isActive = not isActive
         if isActive then
-            AnimBtn.Text = "BYPASS: ON"
+            AnimBtn.Text = "ANIM: ON"
             AnimBtn.BackgroundColor3 = Color3.fromRGB(60,60,60)
         else
-            AnimBtn.Text = "BYPASS: OFF"
+            AnimBtn.Text = "ANIM: OFF"
             AnimBtn.BackgroundColor3 = Color3.fromRGB(150,50,50)
         end
     end)
@@ -141,4 +141,4 @@ player.CharacterAdded:Connect(function(char)
     end
 end)
 
-print("✅ WataX Anim + BETON siap, UI persistent")
+print("✅ Monyet Anim + BETON siap, UI persistent")
