@@ -11,6 +11,13 @@ local function executeLoadstring(url, name)
     end
 end
 
--- Menjalankan kedua loadstring
-executeLoadstring("https://raw.githubusercontent.com/noirexe/berak/refs/heads/main/WataX.lua", "WataX Script")
-executeLoadstring("https://raw.githubusercontent.com/noirexe/berak/refs/heads/main/mainmap792.lua", "MainMap Script")
+-- Menjalankan kedua loadstring secara bersamaan menggunakan task.spawn
+task.spawn(function()
+    executeLoadstring("https://raw.githubusercontent.com/noirexe/berak/refs/heads/main/WataX.lua", "WataX Script")
+end)
+
+task.spawn(function()
+    executeLoadstring("https://raw.githubusercontent.com/noirexe/berak/refs/heads/main/mainmap792.lua", "MainMap Script")
+end)
+
+print("Kedua script sedang dijalankan secara bersamaan...")
